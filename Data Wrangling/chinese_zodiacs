@@ -1,0 +1,31 @@
+import pymysql
+import pprint
+import csv
+from datetime import datetime
+
+connection = pymysql.connect(
+            host="localhost",
+            user="xxx",
+            passwd="xxxx",
+            db="final_project",
+            autocommit=True,
+            cursorclass=pymysql.cursors.DictCursor
+            )
+
+with connection.cursor() as cursor:
+    with open('chinese_zodiacs.csv') as csvfile:
+        myCSVReader = csv.DictReader(csvfile)
+        sql = """INSERT INTO chinese_zodiacs(associated_animal,start_time,end_time)
+                    VALUE(%(associated_animal)s,%(start_date)s,%(end_date)s)"""
+        for row in myCSVReader:
+            start_str = row['start_time']
+            end_str = row['end_time']
+            parse_template = "%b %d %Y"
+            output_template = "%Y-%m-%d"
+            start_date = datetime.strptime(start_str,parse_template)
+            end_date = datetime.strptime(end_str,parse_template)
+            #print(start_date.strftime(output_template))
+            param_dict = {'start_date': start_date,
+                          'end_date': end_date,
+                          'associated_animal': row['associated_animal']}
+            cursor.execute(sql, param_dict)
