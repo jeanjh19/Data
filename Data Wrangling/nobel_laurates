@@ -1,0 +1,22 @@
+import pymysql
+import pprint
+import csv
+from datetime import datetime
+connection = pymysql.connect(
+            host="localhost",
+            user="xxx",
+            passwd="xxx#",
+            db="final_project",
+            autocommit=True,
+            cursorclass=pymysql.cursors.DictCursor
+            )
+
+with connection.cursor() as cursor:
+        with open('nobel_laureates.csv') as csvfile:
+            myCSVReader = csv.DictReader(csvfile)
+            sql = """INSERT INTO nobel_laureates(name,birthdate,winning_year,
+                                                category,western_constellation_id,chinese_zodiac_id)
+                        VALUE(%(name)s,%(birthdate)s,%(winning_year)s,%(category)s,
+                                  %(western_constellation_id)s,%(chinese_zodiac_id)s)"""
+            for row in myCSVReader:
+                cursor.execute(sql, row)
