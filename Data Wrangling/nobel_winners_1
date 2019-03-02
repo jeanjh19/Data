@@ -1,0 +1,43 @@
+import pymysql.cursors
+import csv
+from datetime import datetime
+
+
+connection = pymysql.connect(
+            host="localhost",
+            user="xxx",
+            passwd="xxx",
+            db="final_project",
+            autocommit=True,
+            cursorclass=pymysql.cursors.DictCursor
+            )
+
+with connection.cursor() as cursor:
+    sql = """SELECT nobel_winners.id AS id,nobel_winners.name AS name,nobel_winners.birthdate AS birthdate,nobel_winners.category AS category,
+    nobel_winners.year AS winning_year,western_constellations.id AS western_constellation_id, chinese_zodiacs.id AS chinese_zodiac_id
+    From nobel_winners
+    JOIN western_constellations
+      ON date_format(nobel_winners.birthdate,'%m-%d')
+      BETWEEN date_format(western_constellations.start_time,'%m-%d')
+      AND date_format(western_constellations.end_time,'%m-%d')
+    JOIN chinese_zodiacs
+    ON chinese_zodiacs.start_time <= nobel_winners.birthdate
+    AND nobel_winners.birthdate <= chinese_zodiacs.end_time"""
+     #or  on nobels.birthday between zodiacs.start_time and zodiacs.end_time
+    cursor.execute(sql)
+    results = cursor.fetchall()
+
+with open('nobel_laureates.csv', 'w') as csvfile:
+    column_names = ['id','name','birthdate','category','winning_year','western_constellation_id','chinese_zodiac_id']
+    myCsvWriter = csv.DictWriter(csvfile,
+                                 delimiter=',',
+                                 quotechar='"',
+                                 fieldnames = column_names)
+
+    myCsvWriter.writeheader()
+
+    for row in results:
+        myCsvWriter.writerow(row)
+
+print("Done writing csv")
+#use new csv(nobel_laureates.csv) to import into nobel_laureates in phpMyAdmin.
