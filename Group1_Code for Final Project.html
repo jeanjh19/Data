@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Group1_Code for Final Project</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0"><center> Code for Final Project</center></h1>
+
+<h3 id="toc_1"><center> Group 1</center></h3>
+
+<h2 id="toc_2">Data Cleaning</h2>
+
+<div><pre><code class="language-none">import pandas as pd
+import numpy as np
+import csv
+import warnings
+warnings.filterwarnings(&#39;ignore&#39;)
+
+data = pd.read_csv(&#39;employee_reviews.csv&#39;)
+data.head()
+
+data[&#39;status&#39;],data[&#39;position&#39;] = data[&#39;job-title&#39;].str.split(&#39;-&#39;,n=1).str
+
+data[&#39;position&#39;].value_counts()[:50]
+
+data[&#39;is_current&#39;] = 0
+data[&#39;is_current&#39;][data[&#39;position&#39;].str.contains(&#39;Current&#39;)] = 1
+
+data[&#39;Anonymous&#39;] = 0
+data[&#39;Anonymous&#39;][data[&#39;position&#39;].str.contains(&#39;Anonymous&#39;)] = 1
+
+data[&#39;SDE&#39;] = 0
+data[&#39;SDE&#39;][data[&#39;position&#39;].str.contains(&#39;Software&#39;)] = 1
+
+data[&#39;Product&#39;] = 0
+data[&#39;Product&#39;][data[&#39;position&#39;].str.contains(&#39;Product&#39;) | data[&#39;position&#39;].str.contains(&#39;Program&#39;) | data[&#39;position&#39;].str.contains(&#39;Project&#39;) ] = 1
+
+data[&#39;Warehouse&#39;] = 0
+data[&#39;Warehouse&#39;][data[&#39;position&#39;].str.contains(&#39;Warehouse&#39;) | data[&#39;position&#39;].str.contains(&#39;Process&#39;) | data[&#39;position&#39;].str.contains(&#39;Stower&#39;) | data[&#39;position&#39;].str.contains(&#39;Packer&#39;)] = 1
+
+data[&#39;Operation&#39;] = 0
+data[&#39;Operation&#39;][data[&#39;position&#39;].str.contains(&#39;Fulfillment&#39;) | data[&#39;position&#39;].str.contains(&#39;Area&#39;) | data[&#39;position&#39;].str.contains(&#39;Operations&#39;)] = 1
+
+data[&#39;Customer Service&#39;] = 0
+data[&#39;Customer Service&#39;][data[&#39;position&#39;].str.contains(&#39;Customer Service&#39;) | data[&#39;position&#39;].str.contains(&#39;Family Room&#39;) | data[&#39;position&#39;].str.contains(&#39;Picker&#39;) | data[&#39;position&#39;].str.contains(&#39;Apple At Home&#39;)] = 1
+
+data[&#39;Account&#39;] = 0
+data[&#39;Account&#39;][data[&#39;position&#39;].str.contains(&#39;Account&#39;) | data[&#39;position&#39;].str.contains(&#39;Accountant&#39;) | data[&#39;position&#39;].str.contains(&#39;Accounting&#39;)] = 1
+
+data[&#39;Repair&#39;] = 0
+data[&#39;Repair&#39;][data[&#39;position&#39;].str.contains(&#39;Mac Specialist&#39;) | data[&#39;position&#39;].str.contains(&#39;Genius&#39;) | data[&#39;position&#39;].str.contains(&#39;Technical Specialist&#39;)] = 1
+
+data[&#39;Recruiter&#39;] = 0
+data[&#39;Recruiter&#39;][data[&#39;position&#39;].str.contains(&#39;Recruiter&#39;)] = 1
+
+data[&#39;Marketing&#39;] = 0
+data[&#39;Marketing&#39;][data[&#39;position&#39;].str.contains(&#39;Sales&#39;) | data[&#39;position&#39;].str.contains(&#39;Seller&#39;) | data[&#39;position&#39;].str.contains(&#39;Marketing&#39;)] = 1
+
+data[&#39;Others&#39;] = 0
+
+data[&#39;Others&#39;] = data[&#39;Others&#39;][data[&#39;Anonymous&#39;] == 0][data[&#39;SDE&#39;] ==0][data[&#39;Product&#39;] == 0][data[&#39;Warehouse&#39;] == 0][data[&#39;Operation&#39;] == 0][data[&#39;Customer Service&#39;] == 0][data[&#39;Account&#39;] == 0][data[&#39;Account&#39;] == 0][data[&#39;Repair&#39;] == 0][data[&#39;Repair&#39;] == 0][data[&#39;Marketing&#39;] == 0] = 1
+
+data[&#39;Manager&#39;] = 0
+data[&#39;Manager&#39;][data[&#39;position&#39;].str.contains(&#39;Manager&#39;)] = 1
+
+data[&#39;Specialist&#39;] = 0
+data[&#39;Specialist&#39;][data[&#39;position&#39;].str.contains(&#39;Specialist&#39;)] = 1
+data[&#39;Specialist&#39;][data[&#39;position&#39;].str.contains(&#39;Genius&#39;)] = 1
+
+data[&#39;Associate&#39;] = 0
+data[&#39;Associate&#39;][data[&#39;position&#39;].str.contains(&#39;Associate&#39;)] = 1
+
+data[&#39;Director&#39;] = 0
+data[&#39;Director&#39;][data[&#39;position&#39;].str.contains(&#39;Director&#39;)] = 1
+
+data[&#39;Expert&#39;] = 0
+data[&#39;Expert&#39;][data[&#39;position&#39;].str.contains(&#39;Expert&#39;)] = 1 #| data[&#39;position&#39;].str.contains(&#39;III&#39;)] = 1
+
+[data[&#39;position&#39;].str.contains(&#39;I&#39;)][data[&#39;position&#39;].str.contains(&#39;II&#39;) == False][data[&#39;position&#39;].str.contains(&#39;III&#39;) == False] = 1
+
+data[&#39;Senior&#39;] = 0
+data[&#39;Senior&#39;] = data[&#39;Senior&#39;][data[&#39;position&#39;].str.contains(&#39;Senior&#39;)] = 1
+
+data = data.drop([&#39;Unnamed: 0&#39;,  &#39;job-title&#39;, &#39;link&#39;], axis = 1)
+data.head()
+
+data.rename(columns={&#39;work-balance-stars&#39;:&#39;workBalance&#39;, 
+                     &#39;culture-values-stars&#39;:&#39;cultureValue&#39;, 
+                     &#39;carrer-opportunities-stars&#39;:&#39;opportunities&#39;, 
+                     &#39;comp-benefit-stars&#39;:&#39;benefits&#39;,
+                     &#39;senior-mangemnet-stars&#39;:&#39;management&#39;}, inplace=True)
+                     
+data.replace(&#39;none&#39;,np.nan,inplace=True)
+data[&#39;overall-ratings&#39;] = data[&#39;overall-ratings&#39;].fillna(data[&#39;overall-ratings&#39;].mean())
+
+data[&#39;workBalance&#39;] = data[&#39;workBalance&#39;].astype(&#39;float64&#39;)
+data[&#39;workBalance&#39;] = data[&#39;workBalance&#39;].fillna(data[&#39;workBalance&#39;].mean())
+
+data[&#39;cultureValue&#39;] = data[&#39;cultureValue&#39;].astype(&#39;float64&#39;)
+data[&#39;cultureValue&#39;] = data[&#39;cultureValue&#39;].fillna(data[&#39;cultureValue&#39;].mean())
+
+data[&#39;opportunities&#39;] = data[&#39;opportunities&#39;].astype(&#39;float64&#39;)
+data[&#39;opportunities&#39;] = data[&#39;opportunities&#39;].fillna(data[&#39;opportunities&#39;].mean())
+
+data[&#39;benefits&#39;] = data[&#39;benefits&#39;].astype(&#39;float64&#39;)
+data[&#39;benefits&#39;] = data[&#39;benefits&#39;].fillna(data[&#39;benefits&#39;].mean())
+
+data[&#39;management&#39;] = data[&#39;management&#39;].astype(&#39;float64&#39;)
+data[&#39;management&#39;] = data[&#39;management&#39;].fillna(data[&#39;management&#39;].mean())
+
+data.head()
+data.describe()
+data.info()
+
+data[&#39;review&#39;] = data[&#39;summary&#39;].str.cat(data[&#39;pros&#39;],sep=&#39; &#39;).str.cat(data[&#39;cons&#39;],sep=&#39; &#39;).str.cat(data[&#39;advice-to-mgmt&#39;],sep=&#39; &#39;)
+
+data = data.drop([&#39;review&#39;], axis = 1)
+data.to_csv(&#39;final_preprocessing.csv&#39;)</code></pre></div>
+
+<h2 id="toc_3">Data Visualization</h2>
+
+<div><pre><code class="language-none">import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+
+data = pd.read_csv(&#39;final_preprocessing.csv&#39;)
+
+f, axes = plt.subplots(ncols=2, nrows=3, figsize=(20, 20))
+
+sns.boxplot(x=&quot;overall-ratings&quot;, y=&quot;company&quot;, data=data, palette=&quot;Blues&quot;, ax = axes[0, 0])
+plt.xlabel(&#39;Overall Rating&#39;)
+plt.ylabel(&#39;Company&#39;)
+
+sns.boxplot(x=&quot;workBalance&quot;, y=&quot;company&quot;, data=data, palette=&quot;Greens&quot;, ax = axes[0, 1])
+plt.xlabel(&#39;Work Balance Rating&#39;)
+plt.ylabel(&#39;Company&#39;)
+
+sns.boxplot(x=&quot;cultureValue&quot;, y=&quot;company&quot;, data=data, palette=&quot;Set1&quot;, ax = axes[1, 0])
+plt.xlabel(&#39;Culture Value Rating&#39;)
+plt.ylabel(&#39;Company&#39;)
+
+sns.boxplot(x=&quot;opportunities&quot;, y=&quot;company&quot;, data=data, palette=&quot;Reds&quot;, ax = axes[1, 1])
+plt.xlabel(&#39;Career Opportunities Rating&#39;)
+plt.ylabel(&#39;Company&#39;)
+
+sns.boxplot(x=&quot;benefits&quot;, y=&quot;company&quot;, data=data, palette=&quot;Purples&quot;, ax = axes[2, 0])
+plt.xlabel(&#39;Company Benefits Rating&#39;)
+plt.ylabel(&#39;Company&#39;)
+
+sns.boxplot(x=&quot;management&quot;, y=&quot;company&quot;, data=data, palette=&quot;Oranges&quot;, ax = axes[2, 1])
+plt.xlabel(&#39;Management Rating&#39;)
+plt.ylabel(&#39;Company&#39;)
+
+sns.catplot(x=&#39;overall-ratings&#39;, y= &#39;company&#39;, hue= &#39;is_current&#39;, 
+            data = data, kind =&#39;bar&#39;, aspect=1.5, palette=&quot;Blues&quot;)
+
+sns.catplot(x=&#39;workBalance&#39;, y= &#39;company&#39;, hue= &#39;is_current&#39;, 
+            data = data, kind =&#39;bar&#39;, aspect=1.5, palette=&quot;Greens&quot;)
+
+sns.catplot(x=&#39;cultureValue&#39;, y= &#39;company&#39;, hue= &#39;is_current&#39;, 
+            data = data, kind =&#39;bar&#39;, aspect=1.5, palette=&quot;Set1&quot;)
+
+sns.catplot(x=&#39;opportunities&#39;, y= &#39;company&#39;, hue= &#39;is_current&#39;, 
+            data = data, kind =&#39;bar&#39;, aspect=1.5, palette=&quot;Reds&quot;)
+
+sns.catplot(x=&#39;benefits&#39;, y= &#39;company&#39;, hue= &#39;is_current&#39;, 
+            data = data, kind =&#39;bar&#39;, aspect=1.5, palette=&quot;Purples&quot;)
+
+sns.catplot(x=&#39;management&#39;, y= &#39;company&#39;, hue= &#39;is_current&#39;, 
+            data = data, kind =&#39;bar&#39;, aspect=1.5, palette=&quot;Oranges&quot;)</code></pre></div>
+
+<h2 id="toc_4">Sentiment Analysis</h2>
+
+<div><pre><code class="language-none">import pandas as pd
+import numpy as np
+import nltk
+nltk.download(&#39;vader_lexicon&#39;)
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from sklearn.preprocessing import MinMaxScaler
+
+data = pd.read_csv(&#39;final_preprocessing.csv&#39;)
+data.rename(columns={&#39;Unnamed: 0&#39;:&#39;idNumber&#39;}, inplace=True)
+dat = data.copy()
+dat = dat[[&#39;idNumber&#39;,&#39;overall-ratings&#39;,&#39;reviews&#39;]]
+dat[&#39;overall-ratings&#39;] = data[&#39;overall-ratings&#39;].astype(int)
+
+def sentiment_analyzer_scores(text):
+    analyser = SentimentIntensityAnalyzer()
+    score = analyser.polarity_scores(text)
+    compound_score = score[&#39;compound&#39;]
+    pos_score = score[&#39;pos&#39;]
+    neg_score = score[&#39;neg&#39;]
+    neu_score = score[&#39;neu&#39;]
+    return text,compound_score,pos_score,neg_score,neu_score
+
+
+review_Neutral = []
+review_Neg = []
+review_Pos = []
+review_Compound = []
+for i in dat[&#39;reviews&#39;]:
+    i = str(i)
+    result = sentiment_analyzer_scores(i)
+    review_Compound.append(result[1])
+    review_Pos.append(result[2])
+    review_Neg.append(result[3])
+    review_Neutral.append(result[4])
+dat[&#39;Postive&#39;] = review_Pos 
+dat[&#39;Neutral&#39;] = review_Neutral
+dat[&#39;Negative&#39;] = review_Neg
+dat[&#39;Compound&#39;] = review_Compound
+
+dat2 = dat.iloc[:,1:]
+
+dat2[dat2[&#39;Compound&#39;]&lt;0]
+
+scaler = MinMaxScaler()
+rating_scaled = scaler.fit_transform(ratings)
+print(rating_scaled.var())
+compound_scaled = scaler.fit_transform(compounds)
+type(compound_scaled)
+
+rating_scaled = pd.DataFrame(rating_scaled)
+compound_scaled = pd.DataFrame(compound_scaled)
+corrr = pd.concat([rating_scaled,compound_scaled])
+corrr
+
+ratings = dat2[&#39;overall-ratings&#39;].values.reshape(-1,1)
+compounds = dat2[&#39;Compound&#39;].values.reshape(-1,1)
+
+dat2[&#39;overall-ratings&#39;].var()
+
+dat2[&#39;Compound&#39;].var()
+
+text = &quot;good good good fantastic great&quot;
+analyser = SentimentIntensityAnalyzer()
+score = analyser.polarity_scores(text)
+compound_score = score[&#39;compound&#39;]
+pos_score = score[&#39;pos&#39;]
+neg_score = score[&#39;neg&#39;]
+neu_score = score[&#39;neu&#39;]
+print( text,compound_score,pos_score,neg_score,neu_score)
+</code></pre></div>
+
+<h2 id="toc_5">Text Data Processing</h2>
+
+<div><pre><code class="language-none">import re
+import pandas as pd
+import nltk
+nltk.download(&#39;stopwords&#39;)
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer
+from nltk.stem.wordnet import WordNetLemmatizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
+
+data = pd.read_csv(&#39;final_preprocessing.csv&#39;)
+
+test = []
+for i in data[&#39;reviews&#39;]:
+    i = str(i)
+    test.append(i)
+    
+# 1.Normalization
+review_text = [] 
+for i in test:
+    i = i.lower()   #use lowercase 
+    review_text.append(i)
+print(review_text)
+
+# remove punctuation characters and digits 
+review_text2 = []
+for i in review_text:
+    i = re.sub(r&quot;[^a-zA-Z0-9]&quot;,&quot; &quot;,i) 
+    i = re.sub(r&#39;\w*\d\w*&#39;, &#39;&#39;, i)
+    #print(i)
+    review_text2.append(i)
+print(review_text2)
+
+# 2.Tokenization
+token_list = []
+pos_tag_list = [] #this is for the part of pos_tag  
+
+for i in review_text2:
+    words = []
+    input_str = word_tokenize(str(i))
+    for w in input_str:
+        words.append(w)
+        sentence = &quot; &quot;.join(str(item) for item in words)
+    token_list.append(sentence)
+    pos_tag_list.append(words)
+
+print(token_list)
+
+#3. Stop words 
+stopwords_en = stopwords.words(&#39;english&#39;)
+print(stopwords_en)
+#remove the stop words 
+wordsFiltered = []   #this is for the step 6: stemming 
+wordsFilteredPos = [] #this is for the step 5: pos tag
+for w in token_list:
+    if w not in stopwords_en:
+        wordsFiltered.append(w)
+print(wordsFiltered)
+# this loop is for the part of pos_tag_list
+for w in pos_tag_list:
+    if w not in stopwords_en:
+        wordsFilteredPos.append(w)
+print(wordsFilteredPos)
+
+# 4.Part-of-Speech Tagging
+pos_word = []
+from nltk import pos_tag
+for i in wordsFilteredPos:
+    tag = pos_tag(i)
+    pos_word.append(tag)
+print(pos_word)
+tags = []
+for i in pos_word:
+    for k,v in i:
+        tags.append(v)
+print(tags)
+
+# 5. Stemming and Lemmatization
+stemmer= PorterStemmer()
+porterStem = []
+for i in wordsFiltered:   
+    porterStem.append(stemmer.stem(i))
+
+finished_list = []
+for i in porterStem:
+    lemmed = WordNetLemmatizer().lemmatize(i)
+    finished_list.append(lemmed)
+
+#print(finished_list)
+
+
+df = pd.DataFrame(finished_list, columns=[&quot;colummn&quot;])
+df1 = data.append(df)
+df1.to_csv(&#39;final_preprocessing1.csv&#39;, index=False)
+
+data = pd.read_csv(&#39;final_preprocessing1.csv&#39;)
+
+data = pd.get_dummies(data)
+
+count = CountVectorizer(lowercase = False)
+
+bag = count.fit_transform(data[&#39;reviews&#39;].apply(lambda bag: np.str_(bag)))
+
+np.set_printoptions(precision = 2)
+result = bag.toarray()
+feat_names = count.get_feature_names()
+result = pd.DataFrame(result,columns=feat_names)
+
+data.drop(&#39;reviews&#39;,axis = 1, inplace = True)
+final_result = pd.concat([data,result],axis=1)
+
+# Split the data into training and testing sets
+X = final_result
+y = data[&#39;overall-ratings&#39;]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+print(len(X_train))
+print(len(X_test))
+</code></pre></div>
+
+<h2 id="toc_6">Running Regression Models</h2>
+
+<div><pre><code class="language-none">import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import r2_score
+from sklearn.model_selection import KFold 
+from sklearn.ensemble import RandomForestRegressor
+from sklearn import linear_model
+from sklearn.linear_model import Ridge
+from sklearn.ensemble import BaggingRegressor
+
+# PCA
+# According to our trial, 9000 principle components can capture up to 70% variance among the data, which can meet our needs.
+
+PCA = PCA(n_components=9000)
+PCs = PCA.fit_transform(X_train_scaled)
+
+plt.plot(np.arange(1,9001), np.cumsum(PCA.explained_variance_ratio_))
+plt.xlabel(&#39;Component number&#39;)
+plt.ylabel(&#39;Proportion variance explained&#39;)
+plt.show()
+
+
+# Lasso Regression
+kf = KFold(n_splits=5, random_state=42, shuffle=False)
+
+def lasso(i=0):
+    max_score = 0
+    best_alpha = 0
+    cv_score = []
+    alpha = []
+    #alpha_range = range(0, 1)
+
+    while i &lt;= 1:
+        i += 0.1
+        lasso = linear_model.Lasso(alpha=i).fit(X_train_scaled,y_train)
+        score = cross_val_score(lasso, X_train_scaled,y_train, cv = kf,scoring=&#39;r2&#39;).mean()
+        
+        if score &gt; max_score:
+            max_score = score 
+            best_alpha = i
+            
+        cv_score.append(score)
+        alpha.append(i)
+        print(&quot;alpha = &quot;,i)
+        print(&quot;score: &quot;, score)
+    
+    plt.plot(alpha, cv_score)
+    plt.ylabel(&quot;CV Score&quot;)
+    plt.xlabel(&quot;Alpha&quot;)
+    print(&quot;Best Alpha:&quot;,best_alpha)
+    print(&quot;CV Score:&quot;,max_score)
+    
+lasso()
+
+lasso = linear_model.Lasso(alpha=0.1).fit(X_train_scaled,y_train)
+lasso_pred = lasso.predict(X_test_scaled)
+lasso_mse = mean_squared_error(y_test,lasso_pred)
+lasso_mse
+
+# Ridge Regression
+kf = KFold(n_splits=5, random_state=42, shuffle=False)
+
+def ridge(i=0):
+    max_score = 0
+    best_alpha = 0
+    cv_score = []
+    alpha = []
+    #alpha_range = range(0, 1)
+
+    while i &lt;= 1:
+        i += 0.1
+        ridge = linear_model.Ridge(alpha=i).fit(X_train_scaled,y_train)
+        score = cross_val_score(ridge, X_train_scaled,y_train, cv = kf, scoring = &#39;r2&#39;).mean()
+        #print(score)
+        
+        if score &gt; max_score:
+            max_score = score 
+            best_alpha = i
+            
+        cv_score.append(score)
+        alpha.append(i)
+        print(&quot;alpha = &quot;,i)
+        print(&quot;score: &quot;, score)
+    
+    plt.plot(alpha, cv_score)
+    plt.ylabel(&quot;CV Score&quot;)
+    plt.xlabel(&quot;Alpha&quot;)
+    print(&quot;Best Alpha:&quot;,best_alpha)
+    print(&quot;CV Score:&quot;,max_score)
+    
+ridge()
+
+ridge = linear_model.Ridge(alpha=0.5).fit(X_train_scaled,y_train)
+ridge_pred = ridge.predict(X_test_scaled)
+ridge_mse = mean_squared_error(y_test,ridge_pred)
+ridge_mse
+
+# Building Random Forest model on the dataset
+PCA = PCA(n_components=9000)
+PCs = PCA.fit_transform(X_train_scaled)
+X_test_reduced = PCA.transform(X_test_scaled)
+ran_tree = RandomForestRegressor(random_state=0).fit(PCs,y_train)
+tree_pred = ran_tree.predict(X_test_reduced)
+tree_mse = mean_squared_error(y_test,tree_pred)
+tree_mse
+
+# Bagging Method
+bagging = BaggingRegressor(random_state=0).fit(PCs,y_train)
+bagging_pred = bagging.predict(X_test_reduced)
+bagging_mse = mean_squared_error(y_test,bagging_pred)
+bagging_mse</code></pre></div>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
