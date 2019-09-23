@@ -782,3 +782,5 @@ def _get_hourglass_sum(matrix,row,col):
     sum += matrix[row+1][col]
     sum += matrix[row+1][col+1]
     return sum
+
+#continue to update 
